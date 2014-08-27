@@ -43,7 +43,7 @@ section {
     padding: 30px 0;
     margin-top: 70px;
     border-top: 1px solid #e5e5e5;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 .bs-social {
@@ -167,11 +167,11 @@ border-color: #fff;
 
 /* Page headers */
 .bs-header {
-  padding: 10px 15px 10px; /* side padding builds on .container 15px, so 30px */
+  /* padding: 10px 15px 10px; */ /* side padding builds on .container 15px, so 30px */
   font-size: 16px;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  color: #cdbfe3;
+  color: #fff;
   background-color: #006287;
 }
 .bs-header a {
@@ -187,6 +187,9 @@ border-color: #fff;
 }
 .bs-header .container {
   position: relative;
+}
+.bs-header label.active {
+  background-color: #00749F;
 }
 
 @media (min-width: 768px) {
@@ -317,6 +320,19 @@ border-color: #fff;
     height: 50px;
 }
 
+section#box-shuffler .thumbnail {
+	font-size: 100px;
+	display: inline;
+	border: 2px solid #ddd;
+	border-radius: 6px;
+	padding: 5px 20px 5px 20px;
+	margin-left: 5px;
+}
+
+.btn-go {
+	margin-top: 40px;
+}
+
 @media screen and (min-width: 768px) {
 
     .dropdown.open > .navbar-brand + .dropdown-menu {
@@ -334,3 +350,20 @@ border-color: #fff;
     }
 
 }
+
+.carousel {
+}
+
+ol.carousel-indicators {
+	display: none;
+}
+
+.btn-winner:hover, .btn-winner:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-winner:active {
+	background-color: #00749F;
+}
+

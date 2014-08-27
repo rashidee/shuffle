@@ -10,5 +10,9 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+  "com.google.code.gson" % "gson" % "2.2.4",
+   "com.github.fge" % "json-schema-validator" % "2.1.8",
+    "org.mongodb" % "mongo-java-driver" % "2.12.0-rc3",
+    "commons-io" % "commons-io" % "2.3"
 )

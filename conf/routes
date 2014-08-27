@@ -5,5 +5,7 @@
 # Home page
 GET     /                           controllers.Assets.at(path="/public", file="index.html")
 
+GET     /employees/random           controllers.Application.RandomEmployee()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /*file               controllers.Assets.at(path="/public", file)
