@@ -310,6 +310,27 @@ border-color: #fff;
     }
 }
 
+.navbar-inner {
+	height: 72px;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: #0096D6;	
+}
+
+img.logo {
+	margin-top: -10px;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+	font-size: 40px;
+}
+
+ul.nav a {
+	margin-top: 10px;
+}
+
 .navbar-nav .dropdown .navbar-brand {
     max-width: 100%;
     margin-right: inherit;

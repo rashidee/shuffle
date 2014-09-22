@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-12" >
+        <section id="box-shuffler">
+                <div class="page-header text-center" ng-class="msgAnimClass">
+                        <h1>{{ message }}</h1>
+                </div>
+            <div class="text-center">
+                <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                                <span ng-repeat="id in ids | orderBy:'idx':false" ng-style="{'background-color': id.bgcolor}"  class="thumbnail">{{ id.sval }}<$
+                        </div>
+                        <div class="col-lg-2"></div>
+                </div>
+                <div class="row" ng-hide="validateWinner">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                                <button ng-disabled="disableGo" class="btn-go btn btn-danger btn-lg btn-block" ng-click="startShuffle()"><h2>GO!</h2></button>
+                        </div>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="row" ng-show="validateWinner">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-4">
+                                <button class="btn-go btn btn-default btn-lg btn-block" ng-click="revealWinner()"><h2>Reveal Name</h2></button>
+                        </div>
+                        <div class="col-lg-4">
+                                <button class="btn-go btn btn-default btn-lg btn-block" ng-click="resetShuffle()"><h2>Restart</h2></button>
+                        </div>
+                        <div class="col-lg-2"></div>
+                </div>
+            </div>
+         </section>
+    </div>
+</div>

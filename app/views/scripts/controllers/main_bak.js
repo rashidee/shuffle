@@ -8,27 +8,7 @@
  * Controller of the angularuiplayApp
  */
 angular.module('angularuiplayApp')
-  .factory('audio', function($document) {
-    var audioElement = $document[0].createElement('audio'); // <-- Magic trick here
-    audioElement.loop=true;
-    return {
-      audioElement: audioElement,
-
-      play: function() {
-        audioElement.src = '103227__zorrodg__contador.mp3';
-        audioElement.play();     //  <-- Thats all you need
-      },
-
-      stop: function() {
-        audioElement.pause();
-      },
-
-      reset: function() {
-       audioElement.load();
-      }
-    }
-  })
-  .controller('MainCtrl', ['$scope', '$interval', '$route', '$http', 'audio', function ($scope, $interval, $route, $http, audio) {
+  .controller('MainCtrl', ['$scope', '$interval', '$route', '$http', function ($scope, $interval, $route, $http) {
 	  	  
 	  $scope.winner = {idx:0, name:'', id: []};
 	  
@@ -93,8 +73,7 @@ angular.module('angularuiplayApp')
 	  	    	//alert(JSON.stringify(data));
 
 	  	    	$scope.disableGo = true;
-			audio.play();
-				
+
 	  	    	 var resJson = {};
 	  	    	  resJson.idx = 1;
 	  	    	  resJson.name = data.employeeName;
@@ -189,7 +168,6 @@ angular.module('angularuiplayApp')
 	  	            if(_counterPromise07===0) {
 	  	            	$scope.ids[7].bgcolor = '#F7BE81';
 	  	            	$scope.ids[7].sval = $scope.ids[7].oval;
-				audio.stop();
 	  	            	_stopIndividualShuffle(7); 
 	  	            }
 	  	        }, _speed);
@@ -258,8 +236,6 @@ angular.module('angularuiplayApp')
       
       $scope.resetShuffle = function() {
     	  $route.reload();
-    	  $scope.disableGo = false;
-	  audio.reset();
       };
       
 	  $scope.message = 'Who\'s the lucky person today?';
@@ -282,4 +258,3 @@ angular.module('angularuiplayApp')
       
       $scope.getEventName();
   }]);
-
